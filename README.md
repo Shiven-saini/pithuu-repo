@@ -41,5 +41,5 @@ For barebone config files, checkout `Template` folder contents.
 
 ### For non-collaborators =>
 
-[![](https://img.shields.io/discord/1177236605115842580?style=for-the-badge&logo=Discord&logoColor=FFFFFF&label=PithuuOS%20Server)](https://discord.gg/ZXPcT9mf)
+[![](https://img.shields.io/discord/1177236605115842580?style=for-the-badge&logo=Discord&logoColor=FFFFFF&label=PithuuOS%20Server)](https://discord.gg/GhmKaUtv)
 <br/>Join the **Discord server** and let us know about your cool ideas! 
