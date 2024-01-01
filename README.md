@@ -17,7 +17,7 @@ SigLevel = Optional DatabaseOptional
 Server = https://raw.githubusercontent.com/shiven-saini/$repo/main/$arch
 ```
 
-Since, right now only **x86_64 architecture** is supported. Edit the last line as per following :
+Since, right now only **x86_64 architecture** is supported. Edit the last line as per following :</br>
 `Server = https://raw.githubusercontent.com/shiven-saini/$repo/main/x86_64`
 
 3. Refresh the pacman mirrorlist =>  `# pacman -Syy`
@@ -41,5 +41,5 @@ For barebone config files, checkout `Template` folder contents.
 
 ### For non-collaborators =>
 
-[![](https://img.shields.io/discord/1177236605115842580?style=for-the-badge&logo=Discord&logoColor=FFFFFF&label=PithuuOS%20Server)](https://discord.gg/GhmKaUtv)
+[![](https://img.shields.io/discord/1177236605115842580?style=for-the-badge&logo=Discord&logoColor=FFFFFF&label=PithuuOS%20Server)](https://discord.gg/uTyyMuQh)
 <br/>Join the **Discord server** and let us know about your cool ideas! 
