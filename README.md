@@ -34,7 +34,7 @@ To contribute your custom packages, package the code files as per official Guide
 1. Fetch the latest changes from repository :- `git pull origin main`
 2. Add mandatory `PKGBUILD` & `.SRCINFO` files.
 3. Remove already existing  .db & .file
-4. Build repository files : `repo-add pithuu-repo *.pkg.tar.zst`
+4. Build repository files : `repo-add pithuu-repo.db.tar.gz *.pkg.tar.zst`
 5. Get rid of recently generated symlinks & rename the *pithuu-repo.tar.gz* to .db & .file each 
 
 For barebone config files, checkout `Template` folder contents.
