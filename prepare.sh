@@ -33,4 +33,11 @@ cd ..
 
 echo -e "[$0] : Finished!"
 
-echo "[Suggestion] : Don't forget the push the repo!"
+# Push to the github repo
+read -p "Want to sync this to the remote repository ? (Y or N) " CH
+
+if [[ "$CH" =~ ^[Yy]$ ]]; then
+	git push origin main
+fi
+
+echo "[$0] : Sync Finished!"
