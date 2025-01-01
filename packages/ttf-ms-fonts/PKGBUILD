@@ -1,0 +1,34 @@
+# Maintainer: Caleb Maclennan <caleb@alerque.com>
+# Contributor: birdflesh <antkoul at gmail dot com>
+# Contributor: Army <uli.armbruster@gmail.com>
+# Contributor: Thayer Williams <thayer@archlinux.org>
+# Contributor: dale <dale@archlinux.org>
+# Contributor : Shiven <shiven.career@proton.me>
+
+pkgname=ttf-ms-fonts
+pkgver=2.0
+pkgrel=12
+pkgdesc='Core TTF Fonts from Microsoft'
+arch=('any')
+url="http://corefonts.sourceforge.net"
+license=('custom:Microsoft')
+provides=('ttf-font')
+_files=('andale32.exe'
+        'arial32.exe'
+        'arialb32.exe'
+        'comic32.exe'
+        'courie32.exe'
+        'georgi32.exe'
+        'impact32.exe'
+        'times32.exe'
+        'trebuc32.exe'
+        'verdan32.exe'
+        'webdin32.exe')
+_dlpath="https://downloads.sourceforge.net/project/corefonts/the%20fonts/final"
+source=("${_files[@]/#/$_dlpath/}")
+sha256sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' )
+
+package() {
+    install -Dm644 -t "$pkgdir/usr/share/fonts/TTF/" *.ttf *.TTF
+    install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname/" Licen.TXT
+}
