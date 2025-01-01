@@ -1,12 +1,10 @@
 # Maintainer: Kamack38 <kamack38.biznes@gmail.com>
-# Maintainer: Shiven <shiven.career@proton.me>
-
 _pkgname='oh-my-posh'
 pkgname="${_pkgname}-bin"
 pkgver=24.17.1
 pkgrel=1
 pkgdesc="A prompt theme engine for any shell."
-arch=('x86_64')
+arch=('x86_64' 'armv7h' 'aarch64')
 url="https://github.com/JanDeDobbeleer/oh-my-posh"
 license=('MIT')
 makedepends=('curl' 'grep' 'sed' 'unzip')
