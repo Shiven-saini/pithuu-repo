@@ -1,6 +1,6 @@
 # Custom PithuuOS-Repository
 
-Custom User repository for hosting pithuuOS related packages and tools. You can add it in your pacman.conf if required.
+Custom User repository for hosting PithuuOS related packages and tools. You can add it in your pacman.conf if required.
 
 ---
 ## Get started :-
@@ -11,14 +11,21 @@ To add this repo in your own Arch like distribution,
 
 2. **Append the repository list** with the the following lines :-
 
+**Remote Repository**
 ```bash
 [pithuu-repo]
 SigLevel = Optional DatabaseOptional
 Server = https://raw.githubusercontent.com/shiven-saini/$repo/main/$arch
 ```
-
 Since, right now only **x86_64 architecture** is supported. Edit the last line as per following :</br>
 `Server = https://raw.githubusercontent.com/shiven-saini/$repo/main/x86_64`
+
+**Host Locally**
+```bash
+[pithuu-repo]
+SigLevel = Optional DatabaseOptional
+Server = file:///home/$username/local-repo
+```
 
 3. Refresh the pacman mirrorlist =>  `# pacman -Syy`
 
@@ -26,6 +33,8 @@ Since, right now only **x86_64 architecture** is supported. Edit the last line a
 
 ---
 ## Contribution :-
+
+Make sure you have git-lfs(large file storage) extension setup first : `# pacman -S git-lfs`
 
 ### For collaborators =>
 
