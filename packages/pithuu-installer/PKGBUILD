@@ -1,7 +1,7 @@
 # Maintainer: Shiven Saini <shiven.career@proton.me>
 
 pkgname=pithuu-installer
-pkgver=1.0.0  # Replace with the appropriate version
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="An installer framework for Pithuu OS built upon calamares."
 arch=('x86_64')
@@ -27,6 +27,7 @@ package() {
   cd "$srcdir/$pkgname/build"
   make DESTDIR="$pkgdir" install
 
-  # Copy settings.conf to /usr/share/calamares/
-  install -Dm644 "$srcdir/$pkgname/settings.conf" "$pkgdir/usr/share/calamares/settings.conf"
+  # Copy the entire content of the config folder to /etc/calamares/
+  install -d "$pkgdir/etc/calamares/"
+  cp -r "$srcdir/$pkgname/config/"* "$pkgdir/etc/calamares/"
 }
