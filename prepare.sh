@@ -5,7 +5,7 @@
 #!/bin/bash
 
 ARCH=x86_64
-REPO=pithuu-repo
+REPO=pithuu
 
 # cd into respective architecture
 cd ${ARCH}
