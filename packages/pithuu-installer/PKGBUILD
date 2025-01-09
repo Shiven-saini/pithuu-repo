@@ -1,8 +1,8 @@
 # Maintainer: Shiven Saini <shiven.career@proton.me>
 
 pkgname=pithuu-installer
-pkgver=1.0.1
-pkgrel=1
+pkgver=1.1.2
+pkgrel=2
 pkgdesc="An installer framework for Pithuu OS built upon calamares."
 arch=('x86_64')
 url="https://github.com/Shiven-saini/pithuu-installer"
