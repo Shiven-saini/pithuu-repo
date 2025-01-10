@@ -1,0 +1,33 @@
+# Maintainer: Shiven Saini <shiven.career@proton.me>
+
+pkgname=pithuu-installer-nvidia
+pkgver=1.1.2
+pkgrel=2
+pkgdesc="An installer framework for Pithuu OS built upon calamares, optimized for NVIDIA."
+arch=('x86_64')
+url="https://github.com/Shiven-saini/pithuu-installer"
+license=('Apache')
+depends=('boost' 'boost-libs' 'yaml-cpp' 'python' 'python-jsonschema' 'python-yaml'
+         'kcoreaddons' 'kconfig' 'ki18n' 'kiconthemes' 'kpmcore' 'solid'
+         'qt6-base' 'qt6-svg' 'qt6-tools' 'hwinfo' 'polkit-qt6'
+         'squashfs-tools' 'libpwquality')
+makedepends=('extra-cmake-modules' 'git')
+source=("$pkgname::git+https://github.com/Shiven-saini/pithuu-installer.git#branch=nvidia")
+sha256sums=('SKIP')
+
+build() {
+  cd "$srcdir/$pkgname"
+  mkdir -p build
+  cd build
+  cmake -DCMAKE_BUILD_TYPE=Release ..
+  make -j$(nproc)
+}
+
+package() {
+  cd "$srcdir/$pkgname/build"
+  make DESTDIR="$pkgdir" install
+
+  # Copy the entire content of the config folder to /etc/calamares/
+  install -d "$pkgdir/etc/calamares/"
+  cp -r "$srcdir/$pkgname/config/"* "$pkgdir/etc/calamares/"
+}
